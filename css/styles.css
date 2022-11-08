@@ -1,0 +1,134 @@
+/*reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*estilos generales*/
+body{
+    background-color: #eceef3;
+    font-family: 'Roboto', sans-serif;
+}
+/*estilods del contenedor principal*/
+.contenedor{
+    height: 100vh;
+
+}
+/*estilos de header*/
+header{
+    display: none;
+}
+
+/*estilos de main*/
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main h2{
+    color: #182941;
+    text-align: center;
+}
+main h2 span{
+    display: block;
+}
+main p{
+    text-align: center;
+    padding: 1rem;
+
+}
+main .boton{
+    background-color: #51B0DF;
+    color: whitesmoke;
+    padding: 0.7rem;
+    box-shadow: 1px 1px 5px black;
+    text-shadow: 1px 1px 5px black;
+}
+main img{
+    width: 70%;
+}
+/*estilos de sectin*/
+section{
+    display: none;
+}
+/*estilos de footer*/
+footer h4{
+    text-align: center;
+}
+/*mq*/
+@media screen and (min-width:800px){
+    .contenedor{
+        display: grid;
+        height: 100vh;
+    }
+ 
+    header{
+        display: block;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    header nav ul{
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+    }
+    header nav ul li :hover{
+        background-color: #51B0DF;
+        font-weight: bold;
+        transform: rotate(20deg);
+    }
+    main{
+       
+        display: grid;
+        grid-template-columns: 2fr 2fr ;
+        grid-row: 0.5fr 1fr 0.5fr  0.5fr ;
+        grid-template-areas: 
+        "p img"
+        "h2 img"
+        "p-dos img"
+        "boton img";
+        justify-content: center;
+        justify-items: center;
+    }
+    main p{
+        grid-area: p;
+    }
+    main h2{
+        grid-area: h2;
+    }
+    main .p-dos{
+        grid-area: p-dos;
+    } 
+    main boton{
+        grid-area: boton;
+    }
+    main img{
+        grid-area: img;
+        filter: drop-shadow(5px 5px 10px);
+    }
+    /*estilos de section*/
+    section{
+        display: block;
+        display: flex;
+        background-color:  #BEE0F1;
+    }
+    section div{
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    section div img{
+       width: 20%;
+       filter: drop-shadow(2px 2px 4px);
+    }
+    section div p{
+        text-align: center;
+    }
+
+    /*estilos de footer*/
+    footer{
+        display: none;
+    }
+}
